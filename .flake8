@@ -1,0 +1,10 @@
+[flake8]
+max-line-length = 100
+exclude = .git,__pycache__,venv,.venv
+# E203: whitespace before ':' — ignored because black formatter uses this style
+# E221: multiple spaces before operator — ignored for alignment readability
+# E402: module level import not at top — ignored for sys.path.append pattern
+per-file-ignores =
+    src/*.py: E203, E221, E402
+    tests/*.py: E203, E221, E402
+extend-ignore = E203, E221
